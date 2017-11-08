@@ -27,7 +27,7 @@ func checkResponse(response *hydra.APIResponse, err error, expectedStatusCode in
 	pkg.Must(err, "Could not validate token: %s", err)
 
 	if response.StatusCode != expectedStatusCode {
-		fmt.Printf("Command failed because status code %d was expeceted but code %d was received.", expectedStatusCode, response.StatusCode)
+		fmt.Printf("Command failed because status code %d was expected but code %d was received.\n", expectedStatusCode, response.StatusCode)
 		os.Exit(1)
 		return
 	}
